@@ -1,0 +1,23 @@
+.users{
+    color: darkblue;
+    font-size: 30px;
+    
+    
+} 
+
+span{
+    background-color: darkturquoise;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 6px solid darkblue;
+    border-radius: 8px;
+}
+
+
+table{
+    border: 6px solid darkred;
+    border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    margin-top: 35px;
+}

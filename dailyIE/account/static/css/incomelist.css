@@ -1,0 +1,129 @@
+
+    th{
+        color: black;
+        background-color: khaki;
+    }
+    tr:hover{
+        /* background-color: rgb(211, 204, 137); */
+        background-color: rgba(213, 243, 255, 0.87);
+        color: black;
+       
+
+    }
+    #search11{
+        background-color:rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: larger;
+        display: flex;
+        margin-left: 350px;
+        margin-top: 0%;
+       
+    }
+   
+    #icon{
+        padding: 8px;
+        position: relative;
+        border: 2px solid black;
+        border-radius: 5px;
+        left: 650px;
+        background-color: skyblue;
+        bottom: 40px;
+       
+        
+    }
+
+    #search11::placeholder{
+        
+        color: gray;
+    }
+    
+  
+    
+ span{
+    font-size: 35px;
+    position: absolute;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    
+    
+ }
+
+
+    .iside{
+        width: 255px;
+        height: 100%;
+        background-color: darkblue;
+        border: 5px solid black;
+        position: fixed;
+        top: 0%;
+        right: 0%;
+    }
+
+    .iside a{
+        color: azure;
+        text-decoration: none;
+    }
+    
+
+    .iside h2{
+        padding: 10px;
+        margin: 10px;
+        color:khaki;
+    }
+
+    .iside h2 a:hover{
+        background-color:darkred;
+        color:gold;
+        border: solid 5px rgb(0, 0, 0);
+        border-radius: 50px;
+        cursor: pointer;
+        padding: 15px ;
+    }
+
+    .iside p{
+        color: black;
+        padding: 10px 8px;
+        font-size: larger;
+        background-color: khaki;
+        border: solid 5px black;
+        border-radius: 155px;
+    }
+
+
+     
+
+    td, tr{
+        padding: 8px;
+        border: 1px solid blue;
+    }
+
+    .del{
+        text-decoration: none;
+        background-color: red;
+        color: white;
+
+    }
+
+    .del a{
+        text-decoration: none;
+        color: white;
+
+    }
+
+    .edi{
+        text-decoration: none;
+        background-color:yellow;
+        color: white;
+
+    }
+
+    .edi a{
+        text-decoration: none;
+        color: black;
+
+    }
+   .categ{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }

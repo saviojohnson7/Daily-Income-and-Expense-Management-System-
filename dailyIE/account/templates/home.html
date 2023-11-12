@@ -1,0 +1,57 @@
+{%extends 'sidebar.html'%}
+{%block body%}
+
+{%load static%}
+<link rel="stylesheet" href="{%static 'css/home.css'%}">
+
+
+
+<span>Daily Income-Expense Management System</span>
+
+{%if user.is_authenticated %}
+<!-- <h2 class="users">Welcome, {{user}}</h2> -->
+<table border="5" style="background-color: rgb(255, 247, 172);"  >
+
+    <tr>
+        <td>
+
+            <h2 style="color: green;">Total Income - Rs {{incb}}</h2>
+        </td>
+      <tr>
+          <td>
+
+              <h2 style="color: red;">Total Expense - Rs {{expb}}</h2>
+          </td>
+      </tr>
+      <tr><td>
+
+          <h2 style="color: rgb(0, 9, 128);"> Balance - Rs {{bal}}</h2>
+      </td></tr>
+    </tr>
+</table>
+
+<!-- 
+<div class="copyright">
+    <h3>©️ Made by Savio Johnson </h3>
+</div> -->
+    <!-- <style>
+        .copyright{
+    
+    width: 1200px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px 0;
+    background: gold;
+    font-weight: 300;
+    margin-left: 0%;
+    margin-top: 520px;
+}
+    </style> -->
+
+{%endif%}
+
+{%endblock%}
+
+
+
+

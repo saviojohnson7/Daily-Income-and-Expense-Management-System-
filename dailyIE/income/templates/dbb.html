@@ -1,0 +1,64 @@
+{%extends 'sidebar.html'%}
+{%block body%}
+
+<script src="https://kit.fontawesome.com/5c3b24e338.js" crossorigin="anonymous"></script>
+{%load static%}
+    <link rel="stylesheet" href="{%static 'css/incomelist.css'%}">
+
+<form method="post" action="{% url 'income_search' %}">
+    
+    {%csrf_token%}
+    <span class="income"><b>Income List:-</b></span>
+    <textarea name="srchs" id="search11" cols="30" rows="2" placeholder="search here " ></textarea>
+
+    <button id="icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>
+
+
+   
+</style>
+{%if s%}
+<table border="5" cellspacing='15' style="border: solid 5px darkred;" >
+    <tr>
+    <th>ID</th>
+    <th>Income</th>
+    <th>Income_type</th>
+    <th>Income_date</th>
+    <th>Description</th>
+    <th>User ID</th>
+    <th colspan="2">Action</th>
+   
+
+</tr>
+<!-- i will get the whole data from el -->
+{%for i in s%} 
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.income}}</td>
+        <td>{{i.income_type}}</td>
+        <td>{{i.income_date}}</td>
+        <!-- <td><textarea name="" id="" cols="10" rows="2">{{i.description}}</textarea></td> -->
+        <td>{{i.description}}</td>
+        <td>{{i.user}}</td>
+        <td class="del"><a href="delete1/{{i.id}}">delete</a></td> 
+        <!-- delete jab jayga id bhi saat mein lekhar jayga -->
+        <td class="edi"><a href="edit/{{i.user.id}}">edit</a></td>
+    </tr>
+{%endfor%}
+
+</table>
+{%else%}
+<h1>No Record Found.....</h1>
+{%endif%}
+
+
+<div class="iside">
+    <p class="categ"><b>CATEGORIES:-</b></p>
+    <h2><a href="{%url 'ilist' %}">All</a></h2>
+    {%for i in ixpt%}
+    <h2><a href="{%url 'ixt' i%}" >{{i}}</a></h2>
+    
+    {%endfor%}
+</div>
+
+{%endblock%}

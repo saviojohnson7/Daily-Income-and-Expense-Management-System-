@@ -1,0 +1,61 @@
+{%extends 'sidebar.html'%}
+{%block body%}
+
+<script src="https://kit.fontawesome.com/5c3b24e338.js" crossorigin="anonymous"></script>
+{%load static%}
+    <link rel="stylesheet" href="{%static 'css/expenselist.css'%}">
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+<form method="post" action="{% url 'expense_search' %}">
+    {%csrf_token%}
+    <span class="income"><b>Expense List:-</b></span>
+    <textarea name="srch" id="search11" cols="30" rows="2" placeholder="search here " ></textarea>
+
+    <button id="icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>
+
+
+<table border="5" cellspacing='10' style="border: solid 5px darkred;" class="tab" >
+    <tr>
+    
+    <th>ID</th>
+    <th>Expense</th>
+    <th>Expense_type</th>
+    <th>Expense_date</th>
+    <th>Description</th>
+    <th>User id</th>
+    <th colspan="3">Action</th>
+   
+
+</tr>
+<!-- i will get the whole data from el -->
+{%for i in s%} 
+
+
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.expense}}</td>
+        <td>{{i.expense_type}}</td>
+        <td>{{i.expense_date}}</td>
+        <td><textarea name="" id="" cols="15" rows="2">{{i.description}}</textarea></td>
+        <td>{{i.user}}</td>
+        <td class="del"><a href="deleteE/{{i.id}}">delete</a></td>
+        <td class="edi"><a href="editE/{{i.id}}">edit</a></td>
+        <td class="pay1"><a href="pay">pay</a></td>
+    </tr>
+{%endfor%}
+
+
+</table>
+
+<div class="rside">
+    <p class="categ"><b>CATEGORIES:-</b></p>
+    <h2><a href="{%url 'list' %}">All</a></h2>
+    {%for i in expt%}
+    <h2><a href="{%url 'ext' i%}">{{i}}</a></h2>
+    {%endfor%}
+</div>
+
+{%endblock%}

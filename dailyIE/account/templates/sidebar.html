@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+
+    
+
+    <div class="side">
+    
+    {%if user.is_authenticated %}
+    
+    <h2><p>Welcome, {{user}}</p></h2>
+    <h2><a href="/">Home</a></h2> 
+    <h2><a href="edit_profile">Edit Profile</a></h2>
+    <h2><a href="inc">Add income</a></h2>
+    <h2><a href="addexpense">Add expense</a></h2>
+    <h2><a href="incomelist">Income list</a></h2>
+    <h2><a href="expenselist">Expense list</a></h2>
+    <h2><a href="logout1">Logout</a></h2>
+
+      {%else%}
+      <h2><a href="/">Home</a></h2>
+        <h2><a href="reg">Registration Form</a></h2>
+        <h2><a href="login_link">Login</a></h2>
+
+    {%endif%}
+        <h2><a href="about">About us</a></h2>
+    </div>
+
+   
+        
+    <div class="main">
+        {%block body%}
+        
+        {%endblock%}
+    </div>
+</body>
+</html>

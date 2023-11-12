@@ -1,0 +1,22 @@
+{%extends 'sidebar.html'%}
+{%block body%} 
+{%load static%}
+<link rel="stylesheet" href="{%static 'css/login.css'%}">
+
+
+<form method="post">
+    {%csrf_token%}
+    <div class="">
+    <div class="container">
+        
+        <h2 class="hdd">LOGIN PAGE</h2>
+        <div class="main1">
+
+            {{d.as_p}}
+        </div>
+        <input type="submit" value="login" class="donn" id="login"> <input id='resetr' type="reset" value="reset" class="donn">
+    </div>
+</div>
+
+     
+{%endblock%} 
